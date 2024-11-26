@@ -16,6 +16,6 @@ ComplexPlane::ComplexPlane(int pixelWidth, int pixelHeight){
 
   m_mouseLocation = Vector2f(0.0f, 0.0f);
 
-  m_state = State::DISPLAYING;
+  m_state = State::CALCULATING;
   m_zoomCount = 0;
 }

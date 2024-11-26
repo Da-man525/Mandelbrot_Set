@@ -23,3 +23,23 @@ ComplexPlane::ComplexPlane(int pixelWidth, int pixelHeight){
 void ComplexPlane::draw(RenderTarget& target, RenderStates states) const{
   target.draw(m_vArray);
 }
+
+void ComplexPlane::zoomIn()
+{
+	++m_zoomCount;
+	Vector2f newsize;
+	newsize.x = BASE_WIDTH * pow(BASE_ZOOM, m_zoomCount);
+	newsize.y = BASE_HEIGHT * m_aspectRatio * pow(BASE_ZOOM, m_zoomCount);
+	m_plane_size = newsize;
+	m_state = CALCULATING;
+}
+
+void ComplexPlane::zoomOut()
+{
+	--m_zoomCount;
+	Vector2f newsize;
+	newsize.x = BASE_WIDTH * pow(BASE_ZOOM, m_zoomCount);
+	newsize.y = BASE_HEIGHT * m_aspectRatio * pow(BASE_ZOOM, m_zoomCount);
+	m_plane_size = newsize;
+	m_state = CALCULATING;
+}

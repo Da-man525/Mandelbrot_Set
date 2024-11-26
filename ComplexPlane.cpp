@@ -60,7 +60,7 @@ void ComplexPlane::setMouseLocation(Vector2i mousPixel)
 int ComplexPlane::countIterations(Vector2f coord){
 	Vector2f z(0.0f, 0.0f);
 
-	const int maxIterations = Max_Iter;
+	const unsigned int maxIterations = Max_Iter;
 
 	for(int i = 0; i < maxIterations; i++){
 		float realPart = pow(z.x, 2) - pow(z.y, 2) + coord.x;

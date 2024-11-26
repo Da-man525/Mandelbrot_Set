@@ -3,6 +3,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
+#include <cmath>
 #include <SFML/Graphics/Drawable.hpp>
 #include <SFML/Graphics/VertexArray.hpp>
 

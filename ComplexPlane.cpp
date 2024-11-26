@@ -31,7 +31,7 @@ void ComplexPlane::zoomIn()
 	newsize.x = BASE_WIDTH * pow(BASE_ZOOM, m_zoomCount);
 	newsize.y = BASE_HEIGHT * m_aspectRatio * pow(BASE_ZOOM, m_zoomCount);
 	m_plane_size = newsize;
-	m_state = CALCULATING;
+	m_state = State::CALCULATING;
 }
 
 void ComplexPlane::zoomOut()
@@ -41,14 +41,14 @@ void ComplexPlane::zoomOut()
 	newsize.x = BASE_WIDTH * pow(BASE_ZOOM, m_zoomCount);
 	newsize.y = BASE_HEIGHT * m_aspectRatio * pow(BASE_ZOOM, m_zoomCount);
 	m_plane_size = newsize;
-	m_state = CALCULATING;
+	m_state = State::CALCULATING;
 }
 
 void ComplexPlane::setCenter(Vector2i mousePixel)
 {
 	Vector2f currcoord = mapPixelToCoords(mousePixel);
 	m_plane_center = currcoord;
-	m_state = CALCULATING;
+	m_state = State::CALCULATING;
 }
 
 void ComplexPlane::setMouseLocation(Vector2i mousPixel)

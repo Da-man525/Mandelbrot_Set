@@ -4,6 +4,7 @@
 #include <sstream>
 #include <vector>
 #include <SFML/Graphics/Drawable.hpp>
+#include <SFML/Graphics/VertexArray.hpp>
 
 const unsigned int MAX_ITER = 64;
 const float BASE_WIDTH = 4.0;

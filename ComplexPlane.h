@@ -5,7 +5,6 @@
 #include <vector>
 #include <SFML/Graphics/Drawable.hpp>
 #include <SFML/Graphics/VertexArray.hpp>
-#include "ComplexPlane.cpp"
 
 const unsigned int MAX_ITER = 64;
 const float BASE_WIDTH = 4.0;

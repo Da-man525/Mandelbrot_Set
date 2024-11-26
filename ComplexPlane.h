@@ -17,7 +17,7 @@ enum class State {
     DISPLAYING
 };
 
-class ComplexPlane
+class ComplexPlane : public sf::Drawable
 {
 public:
 	ComplexPlane(int pixelWidth, int pixelHeight);

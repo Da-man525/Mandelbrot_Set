@@ -6,6 +6,8 @@
 #include <SFML/Graphics/Drawable.hpp>
 #include <SFML/Graphics/VertexArray.hpp>
 
+#ifndef ComplexPlane_H
+#define ComplexPlane_H
 const unsigned int MAX_ITER = 64;
 const float BASE_WIDTH = 4.0;
 const float BASE_HEIGHT = 4.0;
@@ -43,6 +45,7 @@ private:
 	float m_aspectRatio;
 
 };
+#endif
 
 
 

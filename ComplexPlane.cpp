@@ -44,6 +44,19 @@ void ComplexPlane::zoomOut()
 	m_state = CALCULATING;
 }
 
+void ComplexPlane::setCenter(Vector2i mousePixel)
+{
+	Vector2f currcoord = mapPixelToCoords(mousePixel);
+	m_plane_center = currcoord;
+	m_state = CALCULATING;
+}
+
+void ComplexPlane::setMouseLocation(Vector2i mousPixel)
+{
+	Vector2f currcoord = mapPixelToCoords(mousPixel);
+	m_mouseLocation = currcoord;
+}
+
 int ComplexPlane::countIterations(Vector2f coord){
 	Vector2f z(0.0f, 0.0f);
 

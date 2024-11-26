@@ -43,3 +43,22 @@ void ComplexPlane::zoomOut()
 	m_plane_size = newsize;
 	m_state = CALCULATING;
 }
+
+int ComplexPlane::countIterations(Vector2f coord){
+	Vector2f z(0.0f, 0.0f);
+
+	const int maxIterations = Max_Iter;
+
+	for(int i = 0; i < maxIterations; i++){
+		float realPart = pow(z.x, 2) - pow(z.y, 2) + coord.x;
+		float imaginaryPart = 2.0f * z.x * z.y + coord.y;
+
+		z.x = realPart;
+		z.y = imaginaryPart;
+
+		if(pow(z.x, 2) * pow(z.y, 2) > 4.0f){
+			return i;
+		}
+	}
+	return maxIterations;
+}

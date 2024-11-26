@@ -19,3 +19,7 @@ ComplexPlane::ComplexPlane(int pixelWidth, int pixelHeight){
   m_state = State::CALCULATING;
   m_zoomCount = 0;
 }
+
+void ComplexPlane::draw(RenderTarget& target, RenderStates states) const{
+  target.draw(m_vArray);
+}

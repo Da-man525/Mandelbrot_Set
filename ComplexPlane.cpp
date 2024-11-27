@@ -14,6 +14,7 @@ ComplexPlane::ComplexPlane(int pixelWidth, int pixelHeight)
     m_zoomCount = 0;
     m_aspectRatio = static_cast<float>(pixelWidth) / static_cast<float>(pixelHeight);
     m_vArray = VertexArray(Points, m_pixel_size.x * m_pixel_size.y);
+    m_state = State::CALCULATING;
 }
 
 void ComplexPlane::draw(RenderTarget& target, RenderStates states) const{

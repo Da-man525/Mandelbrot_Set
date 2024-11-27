@@ -10,9 +10,11 @@ int main()
 	ComplexPlane game = ComplexPlane(1920, 1080);
 	Font font;
 	Text text;
-	Event event;
 	while (window.isOpen())
 	{
+		Event event;
+		while (window.pollEvent(event))
+		{
 		if (event.type == Event::Closed)
 		{
 			window.close();
@@ -29,6 +31,7 @@ int main()
 				game.zoomIn();
 				game.setCenter(Mouse::getPosition());
 			}
+		}
 		}
 		if (event.type == Event::MouseMoved)
 		{

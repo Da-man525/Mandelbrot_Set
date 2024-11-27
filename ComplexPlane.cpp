@@ -75,3 +75,19 @@ int ComplexPlane::countIterations(Vector2f coord){
 	}
 	return maxIterations;
 }
+
+void ComplexPlane::loadText(Text& text)
+{
+    stringstream outputtext;
+	outputtext << "Mandelbrot Set" << endl << "Center: (" << m_plane_center.x << "," << m_plane_center.y << ")" << endl;
+	outputtext << "Cursor: (" << m_mouseLocation.x << "," << m_mouseLocation.y << ")" << endl;
+	outputtext << "Left-click to zoom in" << endl << "Right-click to zoom out";
+	string outtext = outputtext.str();
+	Font font;
+	font.loadFromFile("arial.ttf");
+	text.setFont(font);
+	text.setCharacterSize(24);
+	text.setFillColor(Color::Red);
+	text.setString(outtext);
+
+}

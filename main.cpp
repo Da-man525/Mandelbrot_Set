@@ -41,6 +41,10 @@ int main()
 		game.updateRender();
 		game.loadText(text);
 		window.clear();
-		game.draw(text, );
+		game.draw(window, RenderStates::Default);
+		window.draw(text);
+		window.display();
+	}
+}
 	}
 }

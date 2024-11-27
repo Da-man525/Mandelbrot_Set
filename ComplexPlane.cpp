@@ -91,3 +91,32 @@ void ComplexPlane::loadText(Text& text)
 	text.setString(outtext);
 
 }
+
+void ComplexPlane::iterationsToRGB(size_t count, Uint8& r, Uint8& g, Uint8& b) {
+
+	if (count >= 0 && count <= 12) {
+		r = 191;
+		g = 0;
+		b = 255;
+	}
+	else if (count >= 13 && count <= 25) {
+		r = 0;
+		g = 251;
+		b = 255;
+	}
+	else if (count >= 26 && count <= 38) {
+		r = 0;
+		g = 255;
+		b = 72;
+	}
+	else if (count >= 39 && count <= 51) {
+		r = 238;
+		g = 255;
+		b = 0;
+	}
+	else {
+		r = 255;
+		g = 60;
+		b = 0;
+	}
+}

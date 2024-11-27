@@ -95,11 +95,16 @@ void ComplexPlane::loadText(Text& text)
 
 void ComplexPlane::iterationsToRGB(size_t count, Uint8& r, Uint8& g, Uint8& b) {
 
-	if (count >= 0 && count <= 12) {
-		r = 191;
-		g = 0;
-		b = 255;
-	}
+	if (count == MAX_ITER) {
+	r = 0;
+	g = 0;
+	b = 0;
+        }
+       else if (count >= 0 && count <= 12) {
+	r = 191;
+	g = 0;
+	b = 255;
+        }
 	else if (count >= 13 && count <= 25) {
 		r = 0;
 		g = 251;

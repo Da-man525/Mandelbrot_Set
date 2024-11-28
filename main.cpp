@@ -3,11 +3,13 @@ using namespace sf;
 
 int main()
 {
-	VideoMode vm(1920, 1080);
+       int scrteenwidth = VideoMode::getDesktopMode().width / 2;
+       int scrteenhight = VideoMode::getDesktopMode().height / 2;
+       VideoMode vm(scrteenwidth, scrteenhight);
 
-	RenderWindow window(vm, "MandelBrot Set", Style::Default);
+       RenderWindow window(vm, "MandelBrot Set", Style::Default);
 
-	ComplexPlane game = ComplexPlane(1920, 1080);
+       ComplexPlane game = ComplexPlane(scrteenwidth, scrteenhight);
 	Font font;
 	Text text;
 	while (window.isOpen())

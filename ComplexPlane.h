@@ -16,8 +16,8 @@ const float BASE_HEIGHT = 4.0;
 const float BASE_ZOOM = 0.5;
 
 enum class State {
-    CALCULATING,
-    DISPLAYING
+	CALCULATING,
+	DISPLAYING
 };
 
 class ComplexPlane : public sf::Drawable

@@ -3,8 +3,8 @@ using namespace sf;
 
 int main()
 {
-	int scrteenwidth = VideoMode::getDesktopMode().width / 2;
-	int scrteenhight = VideoMode::getDesktopMode().height / 2;
+	int scrteenwidth = VideoMode::getDesktopMode().width;
+	int scrteenhight = VideoMode::getDesktopMode().height;
 	VideoMode vm(scrteenwidth, scrteenhight);
 
 	RenderWindow window(vm, "MandelBrot Set", Style::Default);
